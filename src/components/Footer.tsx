@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-brown-950 text-brown-100 pt-16 pb-8">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white mb-4">TrueScale</h3>
@@ -33,10 +33,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['About Us', 'Services', 'Projects', 'Testimonials', 'Contact'].map((item, index) => (
+              {['About Us', 'Services', 'Projects'].map((item, index) => (
                 <li key={index}>
                   <a 
-                    href="#" 
+                    href={`#${item.toLowerCase().replace(' ', '-')}`} 
                     className="text-brown-300 hover:text-white transition-colors duration-300 hover:translate-x-1 flex items-center"
                   >
                     <span className="h-0.5 w-0 bg-brown-300 mr-0 group-hover:w-2 group-hover:mr-2 transition-all duration-300"></span>
@@ -76,28 +76,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Newsletter</h4>
-            <p className="text-brown-300 mb-4">
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form className="space-y-2">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full px-4 py-2 bg-brown-900 border border-brown-700 rounded-md focus:outline-none focus:ring-2 focus:ring-brown-500 text-white"
-                required
-              />
-              <button 
-                type="submit" 
-                className="w-full bg-brown-500 hover:bg-brown-600 text-white py-2 rounded-md transition-colors duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
         

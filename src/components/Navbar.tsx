@@ -28,8 +28,8 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'Properties', href: '#properties' },
     { name: 'Services', href: '#services' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'About Us', href: '#about' }
+    // Removed Contact link as we'll be removing that section
   ];
 
   return (

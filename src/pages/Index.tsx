@@ -1,11 +1,8 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import Stats from '@/components/Stats';
-import Testimonials from '@/components/Testimonials';
-import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -27,10 +24,7 @@ const Index = () => {
         <Stats />
       </section>
       <section id="about">
-        <Testimonials />
-      </section>
-      <section id="contact">
-        <CallToAction />
+        {/* Note: We still keep the "about" section ID for navigation purposes */}
       </section>
       <Footer />
     </div>
